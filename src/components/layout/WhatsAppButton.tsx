@@ -1,13 +1,12 @@
 import React from 'react';
-import { Phone } from 'lucide-react';
 
 export default function WhatsAppButton() {
   const whatsappUrl = "https://wa.me/971547772515?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D8%B3%D8%AA%D9%82%20%D9%84%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D8%A9";
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 group">
-      {/* Label Tooltip */}
-      <div className="bg-zinc-950 text-white border border-zinc-800 px-4 py-2 rounded-2xl text-xs font-bold shadow-2xl opacity-0 translate-x-3 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 rtl">
+    <div className="fixed bottom-6 left-6 z-50 flex items-center group">
+      {/* Label Tooltip - Absolute positioned to have 0 layout impact */}
+      <div className="absolute left-20 whitespace-nowrap bg-zinc-950 text-white border border-zinc-800 px-4 py-2 rounded-2xl text-xs font-bold shadow-2xl opacity-0 -translate-x-3 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
         تواصل معنا مباشرة عبر واتساب
       </div>
 
@@ -16,7 +15,7 @@ export default function WhatsAppButton() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] hover:scale-110 transition-all duration-300 cursor-pointer"
+        className="relative flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] hover:scale-110 transition-all duration-300 cursor-pointer shrink-0"
         aria-label="Contact on WhatsApp"
       >
         {/* Pulsing Outer Rings */}
