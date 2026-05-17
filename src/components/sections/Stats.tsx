@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
+import portfolioImg from '../../بنر87.webp';
 
 const cities = ['دبي', 'أبوظبي', 'الرياض', 'جدة', 'القاهرة', 'الإسكندرية'];
 const sectors = ['العقارات', 'المطاعم والكافيهات', 'الأزياء والموضة', 'الصحة والجمال', 'التجزئة والمتاجر', 'التقنية والتطبيقات', 'التعليم', 'الخدمات المهنية'];
@@ -123,7 +124,43 @@ export default function Stats() {
             ))}
           </div>
         </div>
+      </div> {/* Closes max-w-7xl */}
 
+      {/* Full-width Portfolio Banner Showcase */}
+      <div className="w-full my-24 relative group overflow-hidden py-12 md:py-16">
+        {/* Soft background glows */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-pistachio-500/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-zinc-300/10 blur-[120px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10 text-center">
+          <div className="inline-block px-4 py-1.5 bg-pistachio-500/10 border border-pistachio-500/20 rounded-full text-sm font-bold mb-4 text-pistachio-600">
+            📸 معرض سابقة الأعمال الحية
+          </div>
+          <h3 className="text-3xl md:text-5xl font-black text-zinc-900 mb-4">سابقة أعمالنا تتحدث عنّا</h3>
+          <p className="text-lg md:text-xl text-zinc-600 max-w-2xl mx-auto font-medium leading-relaxed">
+            إليك نموذج حي ومباشر من مشاريعنا الناجحة التي أحدثت فرقاً حقيقياً في المبيعات والانتشار الرقمي.
+          </p>
+        </div>
+
+        {/* Full-screen Stretched HD Image Showcase */}
+        <div className="w-full relative overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full"
+          >
+            <img 
+              src={portfolioImg} 
+              alt="سابقة أعمال فستق للتسويق" 
+              className="w-full h-auto block object-cover"
+            />
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cities and Sectors (Marquee or simple tags) */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
