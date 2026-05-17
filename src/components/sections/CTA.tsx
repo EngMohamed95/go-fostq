@@ -14,8 +14,8 @@ export default function CTA() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // Read web app url from environment variables
-    const formUrl = import.meta.env.VITE_FORM_URL;
+    // Google Apps Script Web App URL
+    const formUrl = "https://script.google.com/macros/s/AKfycbzVA0MITqasnV6pgUWeQenmhKyS-Y1tsRCiQ1MMMrg5lURNaK6puEm21v3x31HBMJyDxg/exec";
 
     if (formUrl) {
       try {
