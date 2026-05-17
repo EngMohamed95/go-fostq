@@ -35,7 +35,7 @@ export default function CTA() {
               جاهز تشوف مشروعك يكبر فعلاً؟
             </h2>
             <p className="text-xl text-zinc-400 font-medium max-w-2xl mx-auto leading-relaxed">
-              استشارتك الأولى مجانية وبدون أي التزام. نفهم وضعك، نقولك بصدق وش تحتاج، ونحدد لك الخطوات الصح. أسوأ شيء يصير إنك تطلع بوضوح أكثر عن مشروعك.
+              احجز استشارتك الآن وبدون أي التزام. نفهم وضعك، نقولك بصدق وش تحتاج، ونحدد لك الخطوات الصح. أسوأ شيء يصير إنك تطلع بوضوح أكثر عن مشروعك.
             </p>
           </div>
 
@@ -55,15 +55,11 @@ export default function CTA() {
               <input type="url" id="url" placeholder="رابط موقعك أو حساب المواقع الاجتماعية (اختياري)" className="w-full px-5 py-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-pistachio-500 focus:ring-1 focus:ring-pistachio-500 transition-all" dir="ltr" />
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="pt-4">
               <button disabled={loading} type="submit" className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-pistachio-400 text-zinc-900 rounded-full font-bold text-lg hover:bg-pistachio-500 transition-all disabled:opacity-70 disabled:cursor-not-allowed">
-                {loading ? 'جاري الإرسال...' : 'احجز استشارتك المجانية الحين'}
+                {loading ? 'جاري الإرسال...' : 'احجز استشارتك الحين'}
                 {!loading && <ArrowLeft className="w-5 h-5" />}
               </button>
-              <a href="#" className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-zinc-800 text-white rounded-full font-bold text-lg hover:bg-zinc-700 transition-all">
-                <MessageCircle className="w-5 h-5 text-[#25D366]" />
-                واتساب
-              </a>
             </div>
           </form>
 

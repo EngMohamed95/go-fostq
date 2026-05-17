@@ -38,7 +38,7 @@ export default function ThankYouPage() {
             transition={{ delay: 0.3 }}
             className="text-xl text-zinc-600 mb-12 font-medium max-w-lg mx-auto leading-relaxed"
           >
-            وصلنا طلبك بنجاح. واحد من فريقنا راح يتواصل معك خلال أقل من ٢٤ ساعة عشان نحدد موعد الاستشارة المجانية ونبدأ نخطط لنجاح مشروعك.
+            وصلنا طلبك بنجاح. واحد من فريقنا راح يتواصل معك خلال أقل من ٢٤ ساعة عشان نحدد موعد الاستشارة ونبدأ نخطط لنجاح مشروعك.
           </motion.p>
           
           <motion.div 

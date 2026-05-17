@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import { Instagram, Linkedin, Mail } from 'lucide-react';
 import logo from '../../../logo (2).png';
 
 export default function Footer() {
@@ -57,12 +57,6 @@ export default function Footer() {
                   <span className="text-xs">🌐</span>
                 </div>
                 <span>fostq.com</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-[#25D366]/10 text-[#25D366] flex items-center justify-center shrink-0">
-                  <MessageCircle className="w-4 h-4" />
-                </div>
-                <span>واتساب (للتواصل السريع)</span>
               </li>
             </ul>
           </div>

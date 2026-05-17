@@ -48,7 +48,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
           >
             <a href="#contact" className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-zinc-900 text-white rounded-full font-bold text-lg hover:bg-zinc-800 transition-all hover:scale-105 shadow-xl shadow-zinc-900/20">
-              احجز استشارتك المجانية
+              احجز استشارتك الآن
               <ArrowLeft className="w-5 h-5" />
             </a>
             <a href="#portfolio" className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white text-zinc-900 rounded-full font-bold text-lg hover:bg-zinc-50 transition-all border border-zinc-200">
