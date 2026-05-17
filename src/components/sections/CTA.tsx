@@ -7,13 +7,33 @@ export default function CTA() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      navigate('/thank-you');
-    }, 800);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    // Read web app url from environment variables
+    const formUrl = import.meta.env.VITE_FORM_URL;
+
+    if (formUrl) {
+      try {
+        await fetch(formUrl, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors' // Allows submitting to Google Apps Script smoothly
+        });
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
+    } else {
+      console.warn('VITE_FORM_URL is not set in environment. Simulated local submit.');
+      await new Promise((resolve) => setTimeout(resolve, 800));
+    }
+
+    setLoading(false);
+    navigate('/thank-you');
   };
 
   return (
@@ -39,20 +59,28 @@ export default function CTA() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="relative z-10 space-y-4 max-w-xl mx-auto mb-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} className="relative z-10 space-y-6 max-w-2xl mx-auto mb-10 text-right">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="sr-only">الاسم</label>
-                <input required type="text" id="name" placeholder="اسمك الكريم" className="w-full px-5 py-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-pistachio-500 focus:ring-1 focus:ring-pistachio-500 transition-all" />
+                <label htmlFor="name" className="block text-sm font-bold text-zinc-300 mb-2">اسمك</label>
+                <input required type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" className="w-full px-5 py-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-pistachio-500 focus:ring-1 focus:ring-pistachio-500 transition-all text-right" />
               </div>
               <div>
-                <label htmlFor="phone" className="sr-only">رقم الجوال</label>
-                <input required type="tel" id="phone" placeholder="رقم الجوال" className="w-full px-5 py-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-pistachio-500 focus:ring-1 focus:ring-pistachio-500 transition-all text-right" dir="ltr" />
+                <label htmlFor="phone" className="block text-sm font-bold text-zinc-300 mb-2">رقم جوالك</label>
+                <input required type="tel" id="phone" name="phone" placeholder="مثال: +966501234567 أو 0501234567" className="w-full px-5 py-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-pistachio-500 focus:ring-1 focus:ring-pistachio-500 transition-all text-right" />
               </div>
             </div>
             <div>
-              <label htmlFor="url" className="sr-only">رابط مشروعك (اختياري)</label>
-              <input type="url" id="url" placeholder="رابط موقعك أو حساب المواقع الاجتماعية (اختياري)" className="w-full px-5 py-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-pistachio-500 focus:ring-1 focus:ring-pistachio-500 transition-all" dir="ltr" />
+              <label htmlFor="store-link" className="block text-sm font-bold text-zinc-300 mb-2">رابط المتجر</label>
+              <input required type="text" id="store-link" name="storeLink" placeholder="مثال: اسم المتجر أو رابط الموقع" className="w-full px-5 py-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-pistachio-500 focus:ring-1 focus:ring-pistachio-500 transition-all text-right" />
+            </div>
+            <div>
+              <label htmlFor="monthly-sales" className="block text-sm font-bold text-zinc-300 mb-2">المبيعات الشهرية</label>
+              <input required type="text" id="monthly-sales" name="monthlySales" placeholder="مثال: 50,000 ريال أو وصف المبيعات" className="w-full px-5 py-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-pistachio-500 focus:ring-1 focus:ring-pistachio-500 transition-all text-right" />
+            </div>
+            <div>
+              <label htmlFor="niche" className="block text-sm font-bold text-zinc-300 mb-2">ما هو مجالك؟</label>
+              <input required type="text" id="niche" name="niche" placeholder="مثال: ملابس، إلكترونيات، عطور..." className="w-full px-5 py-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-pistachio-500 focus:ring-1 focus:ring-pistachio-500 transition-all text-right" />
             </div>
             
             <div className="pt-4">
