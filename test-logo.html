@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logo Test Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 40px;
+      background: #f0f0f0;
+    }
+    .preview-container {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .preview-box {
+      flex: 1;
+      padding: 40px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .light-bg {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    .dark-bg {
+      background-color: #09090b; /* zinc-950 */
+      color: #ffffff;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      max-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fostoq Logo Preview Test</h1>
+  <div class="preview-container">
+    <div class="preview-box light-bg">
+      <h2>On Light Background (Navbar)</h2>
+      <img src="logo (2).png" alt="Logo on Light">
+    </div>
+    <div class="preview-box dark-bg">
+      <h2>On Dark Background (Footer / Dark Pill)</h2>
+      <img src="logo (2).png" alt="Logo on Dark">
+    </div>
+  </div>
+</body>
+</html>
