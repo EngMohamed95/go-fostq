@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { CheckCircle, Home, ArrowLeft } from 'lucide-react';
@@ -5,6 +6,19 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
 export default function ThankYouPage() {
+  useEffect(() => {
+    // Ensure dataLayer exists
+    const dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer = dataLayer;
+
+    // Push conversion event to GTM
+    dataLayer.push({
+      event: 'lead_conversion',
+      page_path: '/thank-you',
+      page_title: 'شكراً لك - فستق للتسويق'
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-zinc-50 flex flex-col font-sans">
       <Navbar />
