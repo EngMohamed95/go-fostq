@@ -67,7 +67,7 @@ export default function Hero() {
               <ArrowLeft className="w-5 h-5" />
             </a>
             <a
-              href="https://wa.me/971547772515?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D8%B3%D8%AA%D9%82%20%D9%84%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D8%A9"
+              href="https://wa.me/971547772515?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D9%81%D8%B1%D9%8A%D9%82%20%D9%81%D8%B3%D8%AF%D9%82%20-%20%D8%A7%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D9%87%20%D9%88%D8%B1%D8%A3%D9%8A%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B9%D9%84%D8%A7%D9%86%20%D8%B9%D9%84%D9%8A%20%D8%AC%D9%88%D8%AC%D9%84%20%0A%D8%A7%D8%B1%D9%86%D9%8A%20%20%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6%20%D9%88%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-zinc-900/60 text-white rounded-full font-bold text-lg hover:bg-zinc-800 transition-all border border-zinc-800 hover:scale-105 shadow-sm backdrop-blur-sm"

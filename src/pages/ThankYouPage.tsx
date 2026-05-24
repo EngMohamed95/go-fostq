@@ -17,6 +17,13 @@ export default function ThankYouPage() {
       page_path: '/thank-you',
       page_title: 'شكراً لك - فستق للتسويق'
     });
+
+    // Trigger Google Ads conversion event
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18123741447/J6FQCL3CkrAcEIeyicJD'
+      });
+    }
   }, []);
 
   return (
